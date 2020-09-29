@@ -1,0 +1,351 @@
+### Parches esenciales para grupo funcional de bosque y bosque ribereño
+
+```{r}
+leaflet(data = sf_bosque_bripario) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_bosque_bripario_d_PC(d_PC),
+    fillColor = ~pal_bosque_bripario_d_PC(d_PC),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_bosque_bripario_d_PC,
+    values = ~d_PC, 
+    group = "Parches",
+    title = "Esencialidad"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches esenciales para grupo funcional de bosque y bosque ribereño...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_bosque_bripario_gam/FeatureServer/0)
+
+### Parches importantes para grupo funcional de bosque y bosque ribereño
+
+```{r}
+leaflet(data = sf_bosque_bripario) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_bosque_bripario_IF(IF_),
+    fillColor = ~pal_bosque_bripario_IF(IF_),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_bosque_bripario_IF,
+    values = ~IF_, 
+    group = "Parches",
+    title = "Importancia"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches importantes para grupo funcional de bosque y bosque ribereño...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_bosque_bripario_gam/FeatureServer/0)
+
+### Parches esenciales para grupo funcional de bosque ribereño
+
+```{r}
+leaflet(data = sf_bripario) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_bripario_d_PC(d_PC),
+    fillColor = ~pal_bripario_d_PC(d_PC),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_bripario_d_PC,
+    values = ~d_PC, 
+    group = "Parches",
+    title = "Esencialidad"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches esenciales para grupo funcional de bosque ribereño...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_bripario_gam/FeatureServer/0)
+
+### Parches importantes para grupo funcional de bosque ribereño
+
+```{r}
+leaflet(data = sf_bripario) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_bripario_IF(IF_),
+    fillColor = ~pal_bripario_IF(IF_),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_bripario_IF,
+    values = ~IF_, 
+    group = "Parches",
+    title = "Importancia"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches importantes para grupo funcional de bosque ribereño...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_bripario_gam/FeatureServer/0)
+
+### Parches esenciales para grupo funcional de migratorias
+
+```{r}
+leaflet(data = sf_migratorias) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_migratorias_d_PC(d_PC),
+    fillColor = ~pal_migratorias_d_PC(d_PC),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_migratorias_d_PC,
+    values = ~d_PC, 
+    group = "Parches",
+    title = "Esencialidad"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches esenciales para grupo funcional de migratorias...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_migratorias_gam/FeatureServer/0)
+
+### Parches importantes para grupo funcional de migratorias
+
+```{r}
+leaflet(data = sf_migratorias) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_migratorias_IF(IF_),
+    fillColor = ~pal_migratorias_IF(IF_),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_migratorias_IF,
+    values = ~IF_, 
+    group = "Parches",
+    title = "Importancia"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches importantes para grupo funcional de migratorias...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_migratorias_gam/FeatureServer/0)
+
+### Parches esenciales para grupo funcional de otras
+
+```{r}
+leaflet(data = sf_otras) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_otras_d_PC(d_PC),
+    fillColor = ~pal_otras_d_PC(d_PC),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_otras_d_PC,
+    values = ~d_PC, 
+    group = "Parches",
+    title = "Esencialidad"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches esenciales para grupo funcional de otras...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_otras_gam/FeatureServer/0)
+
+### Parches importantes para grupo funcional de otras
+
+```{r}
+leaflet(data = sf_otras) %>%
+  setView(-84, 9.95, 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen, group = "Stamen") %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = "Imágenes de ESRI") %>%
+  addPolygons(
+    fillOpacity = 0.9,
+    stroke = TRUE,
+    color = ~pal_otras_IF(IF_),
+    fillColor = ~pal_otras_IF(IF_),
+    weight = 0.3,
+    smoothFactor = 0.2,
+    group = "Parches"
+  ) %>%
+  addLayersControl(
+    baseGroups = c("OpenStreetMap", "Stamen", "Imágenes de ESRI"),
+    overlayGroups = c("Parches"),
+    options = layersControlOptions(collapsed = TRUE)    
+  ) %>%  
+  addLegend(
+    position = "bottomright",
+    pal=pal_otras_IF,
+    values = ~IF_, 
+    group = "Parches",
+    title = "Importancia"
+  ) %>%  
+  addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik
+  ) %>%
+  addScaleBar(
+    position = "bottomright",
+    options = scaleBarOptions(imperial = FALSE)
+  )
+```
+
+***
+Parches importantes para grupo funcional de otras...  
+[Dirección del geoservicio](https://services9.arcgis.com/RrvMEynxDB8hycVO/arcgis/rest/services/gam_parches_esenciales_importantes_otras_gam/FeatureServer/0)
